@@ -29,29 +29,6 @@ Simple SHA-256 hashing
 
 SHA collision/statistical testing (optional plotting)
 
-advanced-encryption-suite/
-│
-├── src/
-│   ├── main.py               # Main entry point (menu system)
-│   ├── ciphers/
-│   │   ├── caesar.py
-│   │   ├── substitution.py
-│   │   ├── transposition.py
-│   │   └── vigenere.py
-│   ├── symmetric/
-│   │   └── aes_des.py
-│   ├── modes/
-│   │   └── modes.py
-│   ├── hashing/
-│   │   ├── sha_simple.py
-│   │   └── sha_stats.py
-│   └── utils/
-│       └── helpers.py
-│
-├── tests/
-│   └── 
-├── requirements.txt
-└── README.md
 
 🛠️ Planned Improvements
 
