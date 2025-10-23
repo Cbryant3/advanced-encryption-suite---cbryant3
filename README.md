@@ -1,35 +1,78 @@
-# Encryption Projects and Work – Cameron Bryant (CS 485)
+# Advanced Encryption Suite
 
-A comprehensive collection of encryption and information security projects originally developed for **CS 485 – Information Security** and later refactored for real-world and portfolio readiness.  
-This repository showcases multiple **encryption, decryption, hashing, and cryptographic mode implementations**, all written in **Python** with a command-line interface for user interaction.
+A modular Python-based encryption and decryption toolkit supporting both classical and modern cryptographic algorithms. This project is designed for learning, demonstration, and extension of ciphers, hashing, and encryption modes.
 
----
 
-## 🔐 **Implemented Cryptographic Algorithms**
+🔐 Features
 
-### **Symmetric Key Algorithms**
-- **AES (Advanced Encryption Standard)** – supports ECB, CBC, CFB, and OFB modes
-- **DES (Data Encryption Standard)**
-- **3DES (Triple DES)**
+Classical Ciphers
 
-### **Classical Encryption Techniques**
-- **Caesar Cipher**
-- **Vigenère Cipher**
-- **Permutation Cipher**
-- **Transposition Cipher**
+| Cipher          | Encrypt | Decrypt | Brute Force | Notes                         |
+| --------------- | :-----: | :-----: | :---------: | ----------------------------- |
+| Caesar Cipher   |    ✅    |    ✅    |      ✅      | Integer key                   |
+| Substitution    |    ✅    |    ✅    |      ➖      | Supports permutation mapping  |
+| Transposition   |    ✅    |    ✅    |      ➖      | Simple & double transposition |
+| Vigenère Cipher |    ✅    |    ✅    |      ➖      | Keyword-based encryption      |
 
-### **Hashing**
-- **SHA-256**
 
----
+Modern Symmetric Encryption (via PyCryptodome)
 
-## 🧠 **Features**
-✔ Encrypt and decrypt text using command-line options  
-✔ Multiple modes of operation for block ciphers (ECB, CBC, etc.)  
-✔ User can choose between custom keys or default keys  
-✔ Modular Python structure designed for easy expansion  
-✔ Educational commentary and refactoring for clarity and maintainability  
+| Algorithm | Modes Supported | Key Type         |
+| --------: | --------------- | ---------------- |
+|       AES | ECB, CBC, CFB   | Default/test key |
+|       DES | ECB, CBC, CFB   | Default/test key |
+|      3DES | ECB, CBC, CFB   | Default/test key |
 
----
+Hashing & Examples
 
-## 📁 **Repository Structure**
+Simple SHA-256 hashing
+
+SHA collision/statistical testing (optional plotting)
+
+advanced-encryption-suite/
+│
+├── src/
+│   ├── main.py               # Main entry point (menu system)
+│   ├── ciphers/
+│   │   ├── caesar.py
+│   │   ├── substitution.py
+│   │   ├── transposition.py
+│   │   └── vigenere.py
+│   ├── symmetric/
+│   │   └── aes_des.py
+│   ├── modes/
+│   │   └── modes.py
+│   ├── hashing/
+│   │   ├── sha_simple.py
+│   │   └── sha_stats.py
+│   └── utils/
+│       └── helpers.py
+│
+├── tests/
+│   └── 
+├── requirements.txt
+└── README.md
+
+🛠️ Planned Improvements
+
+Add GUI interface
+
+Add RSA / public key cryptography
+
+Add file encryption support
+
+Improve test coverage
+
+Implement brute-force solver for Substitution & Transposition
+
+🤝 Contributing
+
+Pull requests and new feature ideas are encouraged! Please open an issue to discuss any major changes beforehand.
+
+📜 License
+
+This project is for educational and demonstration purposes. You may use or modify freely with attribution.
+
+✅ Status
+
+🚀 Currently under development. Core encryption modules and CLI menu operational
