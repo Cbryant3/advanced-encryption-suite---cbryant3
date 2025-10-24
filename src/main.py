@@ -119,17 +119,40 @@ def handle_substitution():
 
 def handle_transposition():
     print("Transposition Cipher")
-    action = get_menu_choice("1. Encrypt\n2. Decrypt\n3. Back\nChoose: ", 1, 3)
-    if action == 3:
+    action = get_menu_choice(
+        "1. Simple Encrypt\n"
+        "2. Simple Decrypt\n"
+        "3. Double Encrypt\n"
+        "4. Double Decrypt\n"
+        "5. Back\nChoose: ", 1, 5
+    )
+
+    if action == 5:
         return
+
     text = input("Enter text: ")
-    key = int(input("Enter key (integer): "))
-    if action == 1:
-        encrypted = transposition.encrypt(text, key)
-        print(f"Encrypted: {encrypted}")
-    else:
-        decrypted = transposition.decrypt(text, key)
-        print(f"Decrypted: {decrypted}")
+
+    # SIMPLE TRANSPOSITION
+    if action in (1, 2):
+        key = int(input("Enter key (integer): "))
+        if action == 1:
+            encrypted = transposition.simple_transposition_encrypt(text, key)
+            print(f"Encrypted: {encrypted}")
+        else:
+            decrypted = transposition.simple_transposition_decrypt(text, key)
+            print(f"Decrypted: {decrypted}")
+
+    # DOUBLE TRANSPOSITION
+    elif action in (3, 4):
+        key1 = int(input("Enter first key (integer): "))
+        key2 = int(input("Enter second key (integer): "))
+        if action == 3:
+            encrypted = transposition.double_transposition_encrypt(text, key1, key2)
+            print(f"Double Encrypted: {encrypted}")
+        else:
+            decrypted = transposition.double_transposition_decrypt(text, key1, key2)
+            print(f"Double Decrypted: {decrypted}")
+
 
 def handle_vigenere():
     print("Vigenère Cipher")
