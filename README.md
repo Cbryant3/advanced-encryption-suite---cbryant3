@@ -42,6 +42,33 @@ Improve test coverage
 
 Implement brute-force solver for Substitution & Transposition
 
+
+⚙️ How to Run
+
+Clone the repository
+
+git clone https://github.com/cbryant3/advanced-encryption-suite.git
+cd advanced-encryption-suite
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Run the CLI application
+
+python -m src.main
+
+
+Follow the menu prompts to select:
+
+Classical cipher or modern symmetric encryption
+
+Operation (Encrypt/Decrypt/Back)
+
+Enter text and key
+
 🤝 Contributing
 
 Pull requests and new feature ideas are encouraged! Please open an issue to discuss any major changes beforehand.
