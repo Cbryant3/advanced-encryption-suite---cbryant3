@@ -1,7 +1,8 @@
 ﻿# src/modes/modes.py
 #Thin convenience wrappers for encryption modes.
 from Crypto.Cipher import AES, DES, DES3
-from src.symmetric.aes_des import encrypt_with_mode, decrypt_with_mode
+from ..symmetric.aes_des import encrypt_with_mode, decrypt_with_mode
+
 
 ALGO_MAP = {
     'AES': AES,
